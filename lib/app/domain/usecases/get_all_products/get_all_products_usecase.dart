@@ -1,4 +1,4 @@
-import '../entities/product_entity.dart';
+import '../../entities/product_entity.dart';
 
 // Isso aqui é o contrato do nosso caso de uso para trazer todos os produtos.
 abstract class GetAllProductsUsecase {

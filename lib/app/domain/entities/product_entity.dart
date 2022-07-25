@@ -1,5 +1,6 @@
 // regras de negócio corporativas
 class ProductEntity {
+  int id;
   String name;
   String brand;
   String category;
@@ -7,6 +8,7 @@ class ProductEntity {
   int quantity;
 
   ProductEntity({
+    required this.id,
     required this.name,
     required this.brand,
     required this.category,

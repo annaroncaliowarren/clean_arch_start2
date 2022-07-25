@@ -1,3 +1,4 @@
+import 'package:clean_arch_start2/app/presenter/ui/product_by_id_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/get_it.dart';
@@ -22,6 +23,24 @@ class ProductsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Produtos'),
+        actions: [
+          IconButton(
+            padding: const EdgeInsets.only(
+              right: 30,
+            ),
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => ProductById(),
+                ),
+              );
+            },
+            icon: const Icon(
+              Icons.arrow_circle_right_outlined,
+              size: 35,
+            ),
+          ),
+        ],
       ),
       body: ListView.builder(
         itemCount: productController.products.length,
