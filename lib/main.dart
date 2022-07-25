@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'app/presenter/ui/product_page.dart';
+import 'app_widget.dart';
+import 'core/get_it.dart';
 
 void main() {
+  setUpDependencies();
   runApp(
-    MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: ProductsPage(),
-    ),
+    const MyApp(),
   );
 }

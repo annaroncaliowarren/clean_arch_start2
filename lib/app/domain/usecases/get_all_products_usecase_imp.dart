@@ -13,6 +13,15 @@ class GetAllProductsUsecaseImp implements GetAllProductsUsecase {
 
   @override
   List<ProductEntity> call() {
-    return _getAllProductsRepository.call();
+    List<ProductEntity> listCorrect = [];
+    List<ProductEntity> listProducts = _getAllProductsRepository.call();
+    
+    for (ProductEntity product in listProducts) {
+      if (product.checkAvailability()) {
+        listCorrect.add(product);
+      }
+    }
+
+    return listCorrect;
   }
 }
