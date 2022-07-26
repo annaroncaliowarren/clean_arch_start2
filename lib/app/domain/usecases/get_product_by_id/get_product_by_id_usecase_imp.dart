@@ -8,7 +8,7 @@ class GetProductByIdUsecaseImp implements GetProductByIdUsecase {
   GetProductByIdUsecaseImp(this._getProductByIdRepository);
 
   @override
-  ProductEntity call(int id) {
+  ProductEntity? call(int id) {
     return _getProductByIdRepository.call(id);
   }  
 }

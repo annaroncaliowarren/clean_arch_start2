@@ -8,7 +8,7 @@ class GetProductByIdRepositoryImp implements GetProductByIdRepository {
   GetProductByIdRepositoryImp(this._getProductByIdDatasource);
 
   @override
-  ProductEntity call(int id) {
+  ProductEntity? call(int id) {
     return _getProductByIdDatasource.call(id);
   }
 }
